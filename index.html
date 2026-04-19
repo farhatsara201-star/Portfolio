@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sara Farhat — Product Manager</title>
+  <meta name="description" content="Sara Farhat is a healthtech product manager specializing in health data interoperability, AI-powered clinical applications, and IDP." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">Sara Farhat</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
+        <li><a href="#pm-rounds">PM Rounds</a></li>
+        <li><a href="#contact" class="nav-cta">Let's Connect</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#work" class="mobile-link">Work</a></li>
+      <li><a href="#case-studies" class="mobile-link">Case Studies</a></li>
+      <li><a href="#pm-rounds" class="mobile-link">PM Rounds</a></li>
+      <li><a href="#contact" class="mobile-link">Let's Connect</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Product Manager · Health Data Interoperability & AI Clinical Applications</p>
+        <h1 class="hero-name">Sara Farhat</h1>
+        <p class="hero-tagline">Most product managers discover broken healthcare workflows in discovery interviews.<br>I discovered them at the bedside.</p>
+        <p class="hero-sub">6+ years across clinical practice, health data analytics, and product management. Currently open to PM roles in healthtech — interoperability, AI clinical applications, or value-based care.</p>
+        <div class="hero-actions">
+          <a href="#case-studies" class="btn btn-primary">View My Work</a>
+          <a href="SaraFarhat_Resume_Final.pdf" class="btn btn-secondary" target="_blank">Download Resume</a>
+          <a href="https://www.linkedin.com/in/sara-farhat-ms-hca" class="btn btn-ghost" target="_blank">LinkedIn</a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge">C-CDA · DSM · HL7 · FHIR</span>
+          <span class="badge">0→1 Product Builds</span>
+          <span class="badge">CSPO Certified</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-frame">
+          <img src="headshot.jpg" alt="Sara Farhat" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')" />
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-col">
+          <div class="about-image-wrap">
+            <img src="headshot2.jpg" alt="Sara Farhat" onerror="this.style.display='none'" />
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">6+</span>
+              <span class="stat-label">Years in Health Tech</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">3 of 5</span>
+              <span class="stat-label">Largest US Payers Served</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">0→1</span>
+              <span class="stat-label">DSM Product Build</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text-col">
+          <p class="section-label">About Me</p>
+          <h2 class="section-title">Clinician first.<br>Product manager by design.</h2>
+          <div class="about-body">
+            <p>Most product managers discover broken healthcare workflows in discovery interviews. I discovered them at the bedside — processing prior auth denials while a patient waited, watching discharge failures become readmissions, learning what happens when the data doesn't move and a person pays the price.</p>
+            <p>I started my career as a clinical dietitian, working both inpatient and outpatient across ICU, dialysis, pediatrics, and labor & delivery. After moving to the US and completing my Master's in Healthcare Administration, I stepped into acute care as a Prior Authorization and Care Transition Specialist — navigating denial reversals, discharge failures, and readmission crises inside a safety-net hospital. That combination of direct patient care and operational healthcare reality is what most PMs never get.</p>
+            <p>Today I specialize in <strong>health data interoperability, intelligent document processing, and AI-powered clinical applications</strong> — building products at the intersection of the care continuum and digital health infrastructure. I work fluently across C-CDA, Direct Secure Messaging, HL7, FHIR, EHR integration, HIE, RCM, and prior authorization workflows.</p>
+            <p>I'm passionate about closing the gaps that still define American healthcare: fragmented data, siloed systems, administrative burden that steals time from patient care. That passion shows up in how I define problems, build roadmaps, and push products past the finish line.</p>
+          </div>
+          <div class="about-cta">
+            <a href="#case-studies" class="btn btn-primary">See What I've Built</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section experience" id="work">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Experience</p>
+        <h2 class="section-title">Where I've worked</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-date">June 2023 — Present</span>
+              <span class="timeline-tag">Current</span>
+            </div>
+            <h3 class="timeline-role">Product Manager — Apps & Interoperability</h3>
+            <p class="timeline-company">Concord Technologies <span class="timeline-detail">· B2B SaaS · 5B pages PHI/yr · 3 of 5 largest US payers</span></p>
+            <ul class="timeline-bullets">
+              <li>Shipped Direct Secure Messaging (DSM) from zero to private beta, publicly launched at HIMSS 2026 — leading 8 engineers through alpha to production</li>
+              <li>Secured 6-figure board investment by presenting the full IDP market entry business case to CEO and President</li>
+              <li>Led end-to-end HISP vendor evaluation across 4 candidates — executing NDAs, BAAs, engineering spikes, and contract redlines</li>
+              <li>Built Concord's first healthcare market segmentation framework mapping 7+ care settings to user personas and JTBD</li>
+              <li>Cleared 100+ untriaged feature requests using a custom RICE framework — establishing Concord's first repeatable prioritization pipeline</li>
+              <li>Reduced user errors across Concord Connect™ by establishing usability testing as a core product practice — recruiting end users across FQHCs, specialty clinics, and RCM orgs for structured sessions with the Senior UX/UI Designer, directly driving error-reducing fixes to grid view, advanced search, auto-merge, and document workflows used by 1,000+ users at 40+ healthcare sites</li>
+              <li>Launched Concord's first structured product release communication program, reaching clinical managers, QI directors, and innovation leaders previously unreachable through IT-only channels</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-date">Jan 2022 — March 2023</span>
+            </div>
+            <h3 class="timeline-role">Data & Product Analyst</h3>
+            <p class="timeline-company">CareJourney by Arcadia <span class="timeline-detail">· 2M+ providers · 300M beneficiaries · 10+ yrs longitudinal claims</span></p>
+            <ul class="timeline-bullets">
+              <li>Supported expansion of the ML-powered provider performance scoring product to new subspecialties — contributing to 20% referral network growth and 17% cost index improvement across health system customers</li>
+              <li>Identified $2,000+ in referral cost reduction opportunities per patient through claims landscape analysis using longitudinal Medicare and Medicaid data</li>
+              <li>Wrote claims-based quality measure logic directly in SQL using CCLF Medicare data — defining numerator/denominator logic for MSSP and ACO REACH health systems</li>
+              <li>Contributed to 15% faster time-to-market and 60% fewer support tickets through Agile tracking and standardized QA processes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-date">Jan 2020 — Sep 2020</span>
+            </div>
+            <h3 class="timeline-role">Acute Care Transition & Prior Authorization Specialist</h3>
+            <p class="timeline-company">Kern Medical <span class="timeline-detail">· Safety Net Hospital · Bakersfield, CA</span></p>
+            <ul class="timeline-bullets">
+              <li>Moved readmission rate from 90th → 75th percentile (CMS optimal target: ≤80th) by redesigning nursing discharge process with a cross-functional ACT team</li>
+              <li>Achieved 65% increase in prior authorization approvals with non-contracted payers and 75% improvement in denial reversal rates</li>
+              <li>20% improvement in successful patient transitions through clinical data analysis linking readmission risk to care gaps</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section class="section case-studies" id="case-studies">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Case Studies</p>
+        <h2 class="section-title">Products I've built</h2>
+      </div>
+
+      <!-- CASE STUDY CARDS OVERVIEW -->
+      <div class="cs-cards-grid">
+        <a href="#cs-dsm" class="cs-card">
+          <div class="cs-card-tag">Featured · 0→1 Product Build</div>
+          <div class="cs-card-company">Concord Technologies</div>
+          <h4 class="cs-card-title">Shipping Direct Secure Messaging from Zero to HIMSS</h4>
+          <p class="cs-card-desc">Board investment secured, 8 engineers led, product launched at HIMSS 2026 — built from nothing as the only clinical PM in a telecom company.</p>
+          <span class="cs-card-cta">Read Case Study →</span>
+        </a>
+        <a href="#cs-tether" class="cs-card">
+          <div class="cs-card-tag">Personal Project · AI Prototype</div>
+          <div class="cs-card-company">Tether — Built independently</div>
+          <h4 class="cs-card-title">AI-Powered Post-Discharge Coordination for LVNs</h4>
+          <p class="cs-card-desc">A React prototype I built in 3 weeks — grounded in a workflow I personally worked inside at Kern Medical, where I watched patients slip through the cracks.</p>
+          <span class="cs-card-cta">View Prototype →</span>
+        </a>
+        <a href="#cs-kern" class="cs-card">
+          <div class="cs-card-tag">Clinical Operations · Care Redesign</div>
+          <div class="cs-card-company">Kern Medical · Safety Net Hospital</div>
+          <h4 class="cs-card-title">Redesigning Discharge to Stop Preventable Readmissions</h4>
+          <p class="cs-card-desc">Before I was a PM, I was the person inside the broken workflow — and the one who fixed it. 90th → 75th percentile readmission rate.</p>
+          <span class="cs-card-cta">Read Story →</span>
+        </a>
+        <a href="#cs-carejourney" class="cs-card">
+          <div class="cs-card-tag">Analytics · VBC · Claims Data</div>
+          <div class="cs-card-company">CareJourney by Arcadia</div>
+          <h4 class="cs-card-title">Claims Analytics & Provider Performance Scoring</h4>
+          <p class="cs-card-desc">Working at the boundary between data science and product — writing measure logic in SQL, translating ML outputs into VBC features across 300M+ patient lives.</p>
+          <span class="cs-card-cta">Read More →</span>
+        </a>
+      </div>
+
+      <!-- Case Study 1: DSM -->
+      <div class="case-study featured" id="cs-dsm">
+        <div class="case-study-header">
+          <div class="case-study-tag">Featured · 0→1 Product Build</div>
+          <div class="case-study-company">Concord Technologies · 2023–2026</div>
+        </div>
+
+        <div class="case-study-body">
+          <div class="case-study-text">
+            <h3 class="case-study-title">Shipping Direct Secure Messaging from Zero to HIMSS</h3>
+            <p class="case-study-subtitle">How I identified the market gap, built the business case, ran end-to-end vendor evaluation, defined the product, led 8 engineers, and launched at HIMSS 2026 — as Concord's only healthcare domain expert.</p>
+
+            <div class="case-study-section">
+              <h4>The Problem in Healthcare</h4>
+              <p>Care coordinators manage patient information arriving through fax, portals, email, and DSM — each in different formats, each requiring manual reconciliation before care can move forward. <strong>60% of healthcare leaders report their admin staff spend 4+ hours per day triaging incoming documents.</strong> Referrals arrive missing labs. Discharge summaries land in generic inboxes. Care transition loops break silently, with no one closing them.</p>
+              <p>Meanwhile, the industry was clearly moving toward structured exchange: hospitals receiving information via DSM jumped from 54% to 73% between 2018 and 2023. Hospital adoption was growing 52% year over year. The DirectTrust network carried 466M+ direct messages in Q1 2025 alone. The shift was happening — with or without Concord.</p>
+            </div>
+
+            <div class="case-study-section">
+              <h4>The Business Problem</h4>
+              <p>Concord was already building into the Intelligent Document Processing (IDP) space — processing 5 billion pages of PHI per year for 3 of the 5 largest US payers. But they were positioned as a cloud fax company. DSM was the missing protocol layer that made the IDP story credible to healthcare buyers — and the table-stakes capability competitors were already offering.</p>
+            </div>
+
+            <div class="case-study-section">
+              <h4>My Role</h4>
+              <p>Concord's commercial DNA was telecom and fax — a company of 200+ where clinical PMs were rare. I brought the healthcare fluency the product required: understanding the workflows DSM was meant to fix, the personas using it, and the jobs-to-be-done that would make or break adoption in a clinical setting. That context isn't learnable from a discovery interview — it comes from having worked inside the systems.</p>
+              <p>Beyond domain expertise, I built the product infrastructure that didn't exist before I arrived: the healthcare market segmentation framework, the usability testing program, and the product release communication process — owned end-to-end. I also drove the discovery framework and the feature request prioritization system alongside the broader product team. All of it happened in parallel with defining, designing, and shipping DSM.</p>
+            </div>
+
+            <div class="case-study-section">
+              <h4>The Product Vision</h4>
+              <p>DSM wouldn't just be another messaging channel bolted onto Concord Connect. The vision was a <strong>unified multi-modal intake platform</strong> — one inbox where C-CDA documents, digital faxes, PDFs, and images arrive together, get classified by AI, and route automatically to the right EHR queue without manual intervention. Straight-Through Processing from receipt to system of record. No coordinator bottleneck. No data re-entry. No broken loops.</p>
+              <p>This solved four concrete workflow failures in healthcare: fragmented multi-channel triage, incomplete referrals missing structured data, mixed DSM + fax reconciliation, and care transition loops that closed with no visibility.</p>
+            </div>
+
+            <div class="case-study-section">
+              <h4>What I Built & How</h4>
+              <ul>
+                <li><strong>Secured the investment:</strong> Built and presented the full DSM business case to the CEO, President, and leadership team — positioning DSM as table-stakes infrastructure for Concord's IDP market entry. Won 6-figure board approval.</li>
+                <li><strong>Led end-to-end HISP vendor evaluation:</strong> Evaluated 4 candidates across sandboxes, NDAs, BAAs, engineering spikes, and contract redlines. Delivered Pugh matrix recommendation that leadership adopted. Built vendor-agnostic architecture to prevent future lock-in.</li>
+                <li><strong>Defined the product architecture:</strong> Designed DSM to unify C-CDA, PDF, and JPEG inbound streams into a single point-of-intake inbox. Defined AI-assisted extraction logic for both structured and unstructured attachments. Built lo-fi wireframes for the unified inbox integration with Concord Connect™.</li>
+                <li><strong>Led 8 engineers</strong> through alpha to private beta — sprint planning, backlog grooming, release sequencing, and stakeholder communication at every phase.</li>
+                <li><strong>Built commercial readiness from nothing:</strong> Delivered a 6-session Lunch & Learn series to 80+ stakeholders across CEO, CTO, CMO, sales, implementation, and support. Produced the DSM user manual. Built a living SharePoint Q&A knowledge base. Activated a previously stalled sales team into targeted outreach — mapping 7+ care settings (SNFs, LTACs, FQHCs, RCMs, specialty clinics) to personas, JTBD frameworks, and user journeys.</li>
+                <li><strong>Drove GTM strategy:</strong> Replaced random outreach with Concord's first segment-targeted approach — targeting 15–20% conversion of existing Cloud Fax accounts to Concord Connect™ across health systems, FQHCs, and RCM organizations.</li>
+              </ul>
+            </div>
+
+            <div class="case-study-links">
+              <span class="cs-links-label">External References</span>
+              <a href="https://concord.net/concord-technologies-launches-dsm/" class="cs-link" target="_blank" rel="noopener">Initial DSM Launch Announcement ↗</a>
+              <a href="https://concord.net/concord-technologies-launches-dsm-at-himss26/" class="cs-link" target="_blank" rel="noopener">HIMSS 2026 Public Debut ↗</a>
+            </div>
+
+            <div class="case-study-results">
+              <div class="result-card">
+                <span class="result-num">6-figure</span>
+                <span class="result-desc">Board investment secured</span>
+              </div>
+              <div class="result-card">
+                <span class="result-num">HIMSS 2026</span>
+                <span class="result-desc">Public product debut</span>
+              </div>
+              <div class="result-card">
+                <span class="result-num">15–20%</span>
+                <span class="result-desc">Target conversion from Cloud Fax</span>
+              </div>
+              <div class="result-card">
+                <span class="result-num">80+</span>
+                <span class="result-desc">Stakeholders trained across 6 sessions</span>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="case-study-aside">
+            <div class="dsm-image-box">
+              <img src="DSM2.png" alt="Direct Secure Messaging" />
+            </div>
+            <div class="case-study-skills">
+              <h5>Skills Applied</h5>
+              <ul>
+                <li>C-CDA · Direct Secure Messaging · HL7</li>
+                <li>0→1 Product Development</li>
+                <li>Vendor Evaluation & Contract Negotiation</li>
+                <li>Board-level Business Case</li>
+                <li>GTM Strategy & Market Segmentation</li>
+                <li>Engineering Leadership (8 engineers)</li>
+                <li>Sales Enablement & User Training</li>
+                <li>Lo-fi Wireframing · JTBD · Persona Dev</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 2: Tether -->
+      <div class="case-study" id="cs-tether">
+        <div class="case-study-header">
+          <div class="case-study-tag">Personal Project · AI Product Prototype</div>
+          <div class="case-study-company">Tether — Built independently</div>
+        </div>
+        <div class="case-study-body">
+          <div class="case-study-text">
+            <h3 class="case-study-title">Tether: AI-Powered Post-Discharge Coordination for LVNs</h3>
+            <p class="case-study-subtitle">A fully functional React prototype I built in three weeks — grounded in a workflow I worked inside at Kern Medical, solving a problem I watched cause preventable readmissions firsthand.</p>
+
+            <div class="case-study-section">
+              <h4>The Problem</h4>
+              <p>When I worked on the Acute Care Transition team at Kern Medical, post-discharge follow-up was entirely manual, fragmented, and invisible. LVNs and care coordinators were working off printed patient lists, hunting through massive EHR charts for three relevant facts per patient, scrolling through scheduling systems to find open slots, and discovering critical care gaps mid-call with no structured way to escalate or log what happened.</p>
+              <p>At 20 patients a day, that's a 10-hour workload inside an 8-hour shift. The result: missed appointments, broken care coordination, and preventable readmissions — which cost hospitals an average of <strong>$220,000 annually in CMS penalties</strong>. Patients slipped through the cracks and reappeared in the ER within days of discharge, with no accountability layer between the inpatient team and that return visit.</p>
+            </div>
+
+            <div class="case-study-section">
+              <h4>The Solution</h4>
+              <p>Tether sits between the EHR and the scheduling system as an intelligence layer. It automatically surfaces AI-generated pre-call chart summaries with confidence scoring — so the LVN walks into every call knowing the three things that matter, not hunting for them. It matches scarce appointment slots to patients based on risk level and social barriers, not arrival order. And it tracks every escalation from trigger to resolution with full accountability, so nothing gets lost between the call and the follow-up.</p>
+            </div>
+
+            <div class="case-study-section">
+              <h4>What I Built</h4>
+              <p>A fully functional React prototype, iterated over three weeks from v1 to v2. V1 established the core workflow — pre-call summaries, slot matching, and escalation logging. V2 addressed the harder problems: automation bias (when should the coordinator override the AI?), failure states, edge cases in complex patients, and escalation management across shift changes. Every design decision was grounded in direct clinical experience working inside the exact workflow Tether is built to improve.</p>
+            </div>
+
+            <div class="case-study-links">
+              <span class="cs-links-label">Live Prototype</span>
+              <a href="https://v0.app/chat/tether-app-build-cUJhQOAIZ49?ref=ZYBDZ0" class="cs-link" target="_blank" rel="noopener">View Tether Prototype ↗</a>
+            </div>
+
+            <div class="case-study-results">
+              <div class="result-card">
+                <span class="result-num">$220K</span>
+                <span class="result-desc">Avg. annual CMS penalty per hospital for preventable readmissions</span>
+              </div>
+              <div class="result-card">
+                <span class="result-num">10hrs</span>
+                <span class="result-desc">Daily workload in an 8-hour shift — the gap Tether closes</span>
+              </div>
+              <div class="result-card">
+                <span class="result-num">v1 → v2</span>
+                <span class="result-desc">Full prototype iteration in 3 weeks</span>
+              </div>
+              <div class="result-card">
+                <span class="result-num">React</span>
+                <span class="result-desc">Functional prototype — not a mockup</span>
+              </div>
+            </div>
+          </div>
+          <div class="case-study-aside">
+            <div class="case-study-skills">
+              <h5>Skills Applied</h5>
+              <ul>
+                <li>0→1 Product Design</li>
+                <li>AI Feature Definition</li>
+                <li>Clinical Workflow Research</li>
+                <li>Automation Bias & Edge Cases</li>
+                <li>React Prototyping</li>
+                <li>Care Transition Domain Expertise</li>
+                <li>Failure State Design</li>
+              </ul>
+            </div>
+            <div class="case-study-skills" style="margin-top:1.5rem">
+              <h5>Why I Built This</h5>
+              <p style="font-size:0.875rem; color:rgba(249,243,238,0.65); line-height:1.65;">I didn't build Tether to add something to a portfolio. I built it because I worked that shift, I saw what broke, and I wanted to know whether the problem was actually solvable — and how.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 3: Kern Medical -->
+      <div class="case-study" id="cs-kern">
+        <div class="case-study-header">
+          <div class="case-study-tag">Clinical Operations · Care Redesign</div>
+          <div class="case-study-company">Kern Medical · Safety Net Hospital</div>
+        </div>
+        <div class="case-study-body case-study-body--wide">
+          <h3 class="case-study-title">Redesigning Discharge to Stop Preventable Readmissions</h3>
+          <p class="case-study-subtitle">Before I was a PM, I was the person inside the broken workflow — and the one who fixed it.</p>
+          <div class="case-study-two-col">
+            <div>
+              <div class="case-study-section">
+                <h4>The Problem</h4>
+                <p>Kern Medical is a safety-net hospital serving a high-acuity, underinsured population in Bakersfield, CA. Readmission rates were at the 90th percentile — well above CMS's optimal target of ≤80th. Patients were being discharged without adequate disease management education, without medication reconciliation, and without structured follow-up. The discharge process was fragmented across nursing, pharmacy, and care coordination with no shared protocol.</p>
+                <p>Simultaneously, prior authorization denials with non-contracted payers were blocking patient access to care and creating financial drag on the hospital. Denial reversal rates were low and the process was reactive.</p>
+              </div>
+              <div class="case-study-section">
+                <h4>What I Did</h4>
+                <p>I used clinical and claims data to identify correlations between readmission risk and gaps in patient education, medication adherence, and follow-up compliance. With that data, I redesigned the nursing discharge process — introducing structured disease management education, medication reconciliation at discharge, and a cross-functional ACT team post-discharge protocol across nursing, discharge planning, and pharmacy.</p>
+                <p>On prior authorization, I built a systematic documentation and payer negotiation process that turned reactive denials into proactive approvals — directly improving patient access to care and hospital financial performance.</p>
+              </div>
+            </div>
+            <div>
+              <div class="case-study-results case-study-results--compact">
+                <div class="result-card">
+                  <span class="result-num">90th→75th</span>
+                  <span class="result-desc">Readmission percentile (CMS target: ≤80th)</span>
+                </div>
+                <div class="result-card">
+                  <span class="result-num">65%</span>
+                  <span class="result-desc">Increase in prior auth approvals with non-contracted payers</span>
+                </div>
+                <div class="result-card">
+                  <span class="result-num">75%</span>
+                  <span class="result-desc">Improvement in denial reversal rates</span>
+                </div>
+                <div class="result-card">
+                  <span class="result-num">20%</span>
+                  <span class="result-desc">Improvement in successful patient transitions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-study-section" style="margin-top:1.5rem">
+            <h4>Why This Belongs Here</h4>
+            <p>This wasn't a product role. But it's where the product thinking started — using data to find the gap, redesigning a workflow cross-functionally, and measuring the result. The same instincts show up in every product I've built since.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 4: CareJourney -->
+      <div class="case-study" id="cs-carejourney">
+        <div class="case-study-header">
+          <div class="case-study-tag">ML Product Expansion · VBC Analytics</div>
+          <div class="case-study-company">CareJourney by Arcadia</div>
+        </div>
+        <div class="case-study-body case-study-body--wide">
+          <h3 class="case-study-title">Claims Analytics & Provider Performance Scoring at CareJourney</h3>
+          <p class="case-study-subtitle">Working at the intersection of data and product at a healthcare analytics company building value-based care intelligence across 300M+ patient lives.</p>
+
+          <div class="case-study-two-col">
+            <div>
+              <div class="case-study-section">
+                <h4>Context</h4>
+                <p>CareJourney (now part of Arcadia) is a healthcare analytics company that turns longitudinal Medicare, Medicaid, and commercial claims data into actionable VBC intelligence — provider performance benchmarking, network optimization, referral management, and at-risk population identification across 2M+ physicians. The platform serves health systems, payers, and ACOs navigating MSSP and ACO REACH arrangements.</p>
+                <p>As a Data & Product Analyst, I sat at the boundary between the data science team and the product — close enough to the claims infrastructure to write measure logic directly in SQL, close enough to the product to translate model outputs into features customers could act on.</p>
+              </div>
+              <div class="case-study-section">
+                <h4>The Work</h4>
+                <p>Supported expansion of the Provider Performance Index scoring product to new subspecialties including general surgery — working alongside Data Science to translate ML model outputs for risk adjustment and episode-of-care analysis into product features that gave health system customers actionable intelligence for referral network optimization and VBC strategy.</p>
+                <p>Wrote clinical process quality measures directly in SQL using CCLF-based Medicare claims data — defining numerator and denominator logic to determine measure compliance across claims schemas. Built provider attribution tables using commercial claims data from Change Healthcare, constructing patient-to-provider mapping that surfaced into the platform's aggregated reporting layer for VBC customers.</p>
+              </div>
+            </div>
+            <div>
+              <div class="case-study-results case-study-results--compact">
+                <div class="result-card">
+                  <span class="result-num">20%</span>
+                  <span class="result-desc">Referral network growth</span>
+                </div>
+                <div class="result-card">
+                  <span class="result-num">17%</span>
+                  <span class="result-desc">Cost index improvement</span>
+                </div>
+                <div class="result-card">
+                  <span class="result-num">$2,000+</span>
+                  <span class="result-desc">Cost reduction per patient identified</span>
+                </div>
+                <div class="result-card">
+                  <span class="result-num">60%</span>
+                  <span class="result-desc">Fewer support tickets</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHAT I BRING -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">What I Bring</p>
+        <h2 class="section-title">The PM who's been<br>on both sides of the chart.</h2>
+      </div>
+      <div class="pm-who-grid">
+        <div class="pm-who-card">
+          <span class="pm-who-num">01</span>
+          <p class="pm-who-statement">I'm the PM who can read a C-CDA, explain what's wrong with the discharge summary it carries, and then write the user story to fix the intake workflow — without asking a clinician to translate.</p>
+        </div>
+        <div class="pm-who-card">
+          <span class="pm-who-num">02</span>
+          <p class="pm-who-statement">I'm the PM who builds the infrastructure before building the product. Discovery frameworks, prioritization systems, market segmentation, release comms — if it doesn't exist, I build it.</p>
+        </div>
+        <div class="pm-who-card">
+          <span class="pm-who-num">03</span>
+          <p class="pm-who-statement">I'm the PM who can present a 6-figure business case to a board in the morning and run a usability session with a care coordinator in the afternoon — and code-switch between both without losing either audience.</p>
+        </div>
+        <div class="pm-who-card">
+          <span class="pm-who-num">04</span>
+          <p class="pm-who-statement">I'm the PM who doesn't need a discovery interview to understand prior auth denials or discharge failures. I lived them. That's not a talking point — it's the reason the products I build actually fit how clinicians work.</p>
+        </div>
+        <div class="pm-who-card">
+          <span class="pm-who-num">05</span>
+          <p class="pm-who-statement">I'm the PM who ships in ambiguity. At Concord I was the only clinical PM in a telecom company, with no playbook and no predecessor. I shipped anyway.</p>
+        </div>
+        <div class="pm-who-card">
+          <span class="pm-who-num">06</span>
+          <p class="pm-who-statement">I'm the PM who writes. PM Rounds exists because the industry needs more product voices that have actually rounded on a hospital floor — not just interviewed someone who did.</p>
+        </div>
+      </div>
+      <div class="skills-appendix">
+        <p class="skills-appendix-label">Technical fluency</p>
+        <div class="skill-tags">
+          <span>C-CDA</span><span>DSM</span><span>HL7</span><span>FHIR</span><span>EHR Integration</span><span>IDP</span><span>Prior Auth</span><span>RCM</span><span>SQL</span><span>Python</span><span>Azure DevOps</span><span>Snowflake</span><span>CSPO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PM ROUNDS -->
+  <section class="section pm-rounds" id="pm-rounds">
+    <div class="container">
+      <div class="pm-rounds-inner">
+        <div class="pm-rounds-text">
+          <p class="section-label">Newsletter</p>
+          <img src="pmroundtagsquare.png" alt="PM Rounds — Rounding healthcare together." class="pm-rounds-logo" />
+          <p class="pm-rounds-desc">In clinical medicine, <em>rounds</em> are when nurses and physicians walk the hospital floor together every morning — sharing what they're seeing, teaching the residents, checking on patients. PM Rounds is the same thing, but for healthtech PMs.</p>
+          <p class="pm-rounds-desc">Most healthtech is built by people who've never set foot on a hospital floor. That gap costs patients their safety, clinicians their sanity, and PMs their credibility. I write from inside it — every other Sunday, as a short, honest field note from someone still in the work.</p>
+          <div class="pm-rounds-pillars">
+            <div class="pillar"><span class="pillar-label">Decoder Rings</span><span class="pillar-desc">Healthcare jargon, acronyms, and workflows explained plainly</span></div>
+            <div class="pillar"><span class="pillar-label">Field Observations</span><span class="pillar-desc">What I'm noticing in workflows, products, and markets</span></div>
+            <div class="pillar"><span class="pillar-label">From the Bedside</span><span class="pillar-desc">Clinical stories reframed as product lessons</span></div>
+            <div class="pillar"><span class="pillar-label">Behind the Curtain</span><span class="pillar-desc">What it's actually like to ship something in healthtech</span></div>
+          </div>
+          <a href="https://pmrounds.substack.com" class="btn btn-primary" target="_blank">Subscribe on Substack →</a>
+        </div>
+        <div class="pm-rounds-posts" id="substackPosts">
+          <div class="posts-coming-soon">
+            <p>Posts loading...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Let's talk.</h2>
+        <p class="contact-desc">I'm currently open to new opportunities in healthtech product management. Whether you're building in interoperability, AI clinical applications, or value-based care — I'd love to connect.</p>
+        <div class="contact-links">
+          <a href="mailto:farhatsara201@gmail.com" class="contact-link">
+            <span class="contact-icon">✉</span>
+            <span>farhatsara201@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/sara-farhat-ms-hca" class="contact-link" target="_blank">
+            <span class="contact-icon">in</span>
+            <span>linkedin.com/in/sara-farhat-ms-hca</span>
+          </a>
+          <a href="https://pmrounds.substack.com" class="contact-link" target="_blank">
+            <span class="contact-icon">✍</span>
+            <span>PM Rounds Newsletter</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-name">Sara Farhat</p>
+        <p class="footer-tagline">Product Manager · Health Data Interoperability & AI Clinical Applications</p>
+        <p class="footer-copy">© 2026 Sara Farhat · Los Angeles, CA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
