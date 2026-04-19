@@ -780,6 +780,91 @@ ul { list-style: none; }
   color: var(--terra);
 }
 
+/* ===========================
+   TETHER DEMO / BROWSER MOCKUP
+=========================== */
+.tether-demo-section { margin-bottom: 1.75rem; }
+
+.tether-demo-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.browser-mockup {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  background: rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.browser-dots { display: flex; gap: 5px; flex-shrink: 0; }
+.browser-dots span { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.15); }
+.browser-dots span:nth-child(1) { background: #ff5f57; }
+.browser-dots span:nth-child(2) { background: #febc2e; }
+.browser-dots span:nth-child(3) { background: #28c840; }
+
+.browser-url {
+  flex: 1;
+  font-size: 0.75rem;
+  color: rgba(249,243,238,0.4);
+  background: rgba(0,0,0,0.2);
+  padding: 0.3rem 0.85rem;
+  border-radius: 100px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.browser-open {
+  font-size: 0.85rem;
+  color: rgba(249,243,238,0.4);
+  transition: color var(--transition);
+  flex-shrink: 0;
+}
+.browser-open:hover { color: var(--terra); }
+
+.browser-content {
+  position: relative;
+  width: 100%;
+  height: 580px;
+  background: #0f172a;
+}
+
+.browser-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.iframe-fallback {
+  display: none;
+  position: absolute;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(44,36,32,0.95);
+  text-align: center;
+  padding: 2rem;
+}
+
+.iframe-fallback p { color: rgba(249,243,238,0.6); font-size: 0.9rem; }
+
+@media (max-width: 680px) {
+  .browser-content { height: 420px; }
+}
+
 .case-study-links {
   display: flex;
   align-items: center;
