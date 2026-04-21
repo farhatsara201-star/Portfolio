@@ -792,6 +792,23 @@ ul { list-style: none; }
   margin-bottom: 0.85rem;
 }
 
+.tether-demo-cta {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+.tether-demo-cta p {
+  font-size: 0.9375rem;
+  color: rgba(249,243,238,0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
 .browser-mockup {
   border-radius: var(--radius-lg);
   overflow: hidden;
