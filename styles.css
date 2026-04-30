@@ -1189,6 +1189,35 @@ ul { list-style: none; }
   font-size: 0.9rem;
 }
 
+.pm-rounds-static-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 3rem 2rem;
+  border: 1px solid var(--cream-dark);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.pm-rounds-static-link:hover {
+  border-color: var(--terracotta);
+}
+
+.pm-rounds-static-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--taupe);
+}
+
+.pm-rounds-static-sub {
+  font-size: 0.85rem;
+  color: var(--taupe-light);
+}
+
 .substack-post {
   padding: 1.5rem;
   background: var(--white);
