@@ -1227,6 +1227,12 @@ ul { list-style: none; }
   transition: all var(--transition);
 }
 
+.substack-post-featured {
+  border-color: var(--terra);
+  border-width: 2px;
+  background: #fdf9f7;
+}
+
 .substack-post:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow);

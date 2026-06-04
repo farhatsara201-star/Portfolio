@@ -92,9 +92,11 @@ window.addEventListener('load', () => {
 // ===========================
 // SUBSTACK RSS FEED
 // ===========================
+const FEATURED_POST_URL = 'https://pmrounds.substack.com/p/prior-auth-is-not-broken-its-working';
+
 async function loadSubstackPosts() {
   const SUBSTACK_URL = 'https://pmrounds.substack.com/feed';
-  const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(SUBSTACK_URL)}&count=3`;
+  const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(SUBSTACK_URL)}&count=6`;
   const container = document.getElementById('substackPosts');
 
   try {
@@ -102,11 +104,12 @@ async function loadSubstackPosts() {
     const data = await res.json();
 
     if (data.status !== 'ok' || !data.items || data.items.length === 0) {
-      showComingSoon(container);
       return;
     }
 
-    container.innerHTML = data.items.map(item => {
+    const remaining = data.items.filter(item => item.link !== FEATURED_POST_URL);
+
+    container.innerHTML = remaining.map(item => {
       const date = new Date(item.pubDate).toLocaleDateString('en-US', {
         month: 'long', day: 'numeric', year: 'numeric'
       });
@@ -125,17 +128,8 @@ async function loadSubstackPosts() {
     }).join('');
 
   } catch {
-    showComingSoon(container);
+    // Featured post is always hardcoded above; silence RSS failures silently
   }
-}
-
-function showComingSoon(container) {
-  container.innerHTML = `
-    <div class="posts-coming-soon">
-      <p style="font-family:'Playfair Display',serif;font-size:1rem;color:#7B6860;margin-bottom:0.5rem;">First issue coming soon.</p>
-      <p>Subscribe to PM Rounds to be notified.</p>
-    </div>
-  `;
 }
 
 loadSubstackPosts();

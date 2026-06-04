@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PointClickCare Interview Study Guide — Sara Farhat</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Georgia', serif; font-size: 13px; line-height: 1.65; color: #1a1a1a; background: #fff; padding: 40px; max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 22px; font-weight: bold; margin-bottom: 4px; color: #1a1a1a; }
+  .subtitle { font-size: 13px; color: #666; font-style: italic; margin-bottom: 30px; }
+  h2 { font-size: 15px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; background: #2C2420; color: #F9F3EE; padding: 8px 12px; margin: 32px 0 14px 0; page-break-after: avoid; }
+  h3 { font-size: 13px; font-weight: bold; color: #2C2420; margin: 18px 0 8px 0; border-bottom: 1px solid #ddd; padding-bottom: 4px; page-break-after: avoid; }
+  h4 { font-size: 12px; font-weight: bold; color: #555; margin: 12px 0 6px 0; }
+  p { margin-bottom: 10px; }
+  ul, ol { margin: 8px 0 10px 20px; }
+  li { margin-bottom: 4px; }
+  strong { color: #1a1a1a; }
+  em { color: #555; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 12px; page-break-inside: avoid; }
+  th { background: #2C2420; color: #F9F3EE; padding: 7px 10px; text-align: left; font-weight: bold; }
+  td { padding: 6px 10px; border-bottom: 1px solid #e8e3de; vertical-align: top; }
+  tr:nth-child(even) td { background: #faf7f5; }
+  tr:hover td { background: #f0ebe6; }
+  .highlight-row td { background: #fff3e0 !important; font-weight: bold; }
+  blockquote { background: #f5f0eb; border-left: 4px solid #C4785A; padding: 10px 14px; margin: 12px 0; font-style: italic; font-size: 12px; }
+  pre, code { font-family: 'Courier New', monospace; font-size: 11px; background: #f5f0eb; padding: 10px 14px; border-radius: 4px; display: block; white-space: pre; margin: 10px 0; overflow-x: auto; line-height: 1.5; }
+  .tag { display: inline-block; background: #C4785A; color: white; font-size: 10px; font-weight: bold; padding: 2px 7px; border-radius: 3px; margin-right: 4px; }
+  .note { background: #fff8e1; border: 1px solid #ffe082; padding: 10px 14px; margin: 12px 0; border-radius: 4px; font-size: 12px; }
+  .sara-note { background: #e8f5e9; border: 1px solid #a5d6a7; padding: 10px 14px; margin: 12px 0; border-radius: 4px; font-size: 12px; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 24px 0; }
+  @media print {
+    body { padding: 20px; font-size: 11px; }
+    h2 { page-break-before: auto; }
+    pre, code { font-size: 10px; }
+    table { font-size: 10px; }
+    a { text-decoration: none; color: inherit; }
+  }
+</style>
+</head>
+<body>
+
+<h1>PointClickCare — Interview Study Guide</h1>
+<p class="subtitle">Phone interview: Tuesday &nbsp;·&nbsp; Senior Care PM Role &nbsp;·&nbsp; Sara Farhat</p>
+
+<hr>
+
+<h2>1. The SNF World — Numbers to Know</h2>
+
+<table>
+  <tr><th>Stat</th><th>Number</th></tr>
+  <tr><td>SNFs in the US</td><td>~14,700</td></tr>
+  <tr><td>Medicare SNF stays/year</td><td>~1.8 million</td></tr>
+  <tr><td>Medicare SNF spend/year</td><td>$29 billion</td></tr>
+  <tr><td>PCC customers</td><td>30,000+ provider orgs</td></tr>
+  <tr><td>Average LOS (Medicare short stay)</td><td>~22 days</td></tr>
+  <tr><td>Medicare pays 100%</td><td>Days 1–20</td></tr>
+  <tr class="highlight-row"><td>Patient copay kicks in</td><td>Day 21 ($217/day in 2026)</td></tr>
+  <tr><td>Medicare max coverage</td><td>100 days per benefit period</td></tr>
+  <tr class="highlight-row"><td>Discharge spike</td><td>Day 20 (cost-sharing trigger)</td></tr>
+</table>
+
+<p><strong>Why LOS matters to a PM:</strong> Day 20 is a product signal, not just a clinical one. Discharge spikes at 7, 14, 20, and 100 days — all driven by reimbursement mechanics, not clinical status. PCC's products influence when and how that decision gets made.</p>
+
+<p><strong>To get into SNF, patient must have:</strong></p>
+<ul>
+  <li>3-day inpatient hospital stay (the "3-day rule")</li>
+  <li>Need for skilled care (PT, OT, nursing, IV meds)</li>
+  <li>Medicare Part A coverage</li>
+</ul>
+
+<h2>2. MDS 3.0 — Every Section</h2>
+
+<p><strong>What it is:</strong> A federally mandated standardized assessment tool. Every Medicare/Medicaid SNF resident must be assessed using it. It drives care planning, quality reporting, AND Medicare reimbursement (PDPM).</p>
+<p><strong>Who fills it:</strong> The MDS Coordinator (usually an RN) pulls data from the entire interdisciplinary team — nursing, therapy, social work, dietary, pharmacy.</p>
+
+<table>
+  <tr><th>Section</th><th>Name</th><th>What's in it</th><th>Who contributes</th></tr>
+  <tr><td><strong>A</strong></td><td>Identification Info</td><td>Name, DOB, gender, race, facility ID, admission date, Medicare/Medicaid numbers</td><td>Admin</td></tr>
+  <tr><td><strong>B</strong></td><td>Hearing, Speech & Vision</td><td>Can the resident hear/see? Hearing aids? Communication ability</td><td>Nursing</td></tr>
+  <tr><td><strong>C</strong></td><td>Cognitive Patterns</td><td>BIMS — orientation, memory, attention. Detects dementia</td><td>Nursing</td></tr>
+  <tr><td><strong>D</strong></td><td>Mood</td><td>PHQ-9 depression screen — sadness, sleep, energy, appetite, self-worth</td><td>Social work / Nursing</td></tr>
+  <tr><td><strong>E</strong></td><td>Behavior</td><td>Wandering, physical/verbal behavioral symptoms, rejection of care</td><td>Nursing</td></tr>
+  <tr><td><strong>F</strong></td><td>Preferences for Routine</td><td>What does the resident want? Sleep habits, daily routines, activity preferences</td><td>Social work</td></tr>
+  <tr><td><strong>G</strong></td><td>Functional Status (legacy)</td><td>ADLs — bed mobility, transfers, walking, dressing, eating, toileting</td><td>Nursing / Therapy</td></tr>
+  <tr><td><strong>GG</strong></td><td>Functional Abilities & Goals</td><td>NEW standard. Self-care + mobility. Drives PT/OT payment under PDPM</td><td>PT / OT / Nursing</td></tr>
+  <tr><td><strong>H</strong></td><td>Bladder & Bowel</td><td>Continence status, catheter use, bowel patterns, toileting programs</td><td>Nursing</td></tr>
+  <tr><td><strong>I</strong></td><td>Active Diagnoses</td><td>All current diagnoses coded — PRIMARY dx determines PDPM payment category</td><td>MDS Coordinator / Physician</td></tr>
+  <tr><td><strong>J</strong></td><td>Health Conditions</td><td>Pain (frequency, intensity), dyspnea, tobacco use, falls, prior surgeries</td><td>Nursing</td></tr>
+  <tr class="highlight-row"><td><strong>K</strong></td><td>Swallowing & Nutrition ← SARA</td><td>Swallowing disorders, height/weight, weight loss (5% in 30 days / 10% in 180 days), nutritional approaches (tube feeds, therapeutic diets, mechanically altered)</td><td><strong>Dietitian</strong></td></tr>
+  <tr><td><strong>L</strong></td><td>Oral/Dental Status</td><td>Tooth pain, broken/loose teeth, dental issues affecting eating</td><td>Nursing</td></tr>
+  <tr><td><strong>M</strong></td><td>Skin Conditions</td><td>Pressure injuries (stage 1–4), wounds, burns, skin tears — location and dimensions</td><td>Nursing / Wound care</td></tr>
+  <tr><td><strong>N</strong></td><td>Medications</td><td>Antipsychotics, antianxiety, hypnotics, anticoagulants, opioids, antibiotics, insulin — flagged for quality reporting</td><td>Pharmacy / Nursing</td></tr>
+  <tr><td><strong>O</strong></td><td>Special Treatments</td><td>Therapy minutes (PT, OT, SLP), IV meds, suctioning, trach, vent, dialysis, chemo, isolation</td><td>Therapy / Nursing</td></tr>
+  <tr><td><strong>P</strong></td><td>Restraints & Alarms</td><td>Physical restraints, bed/chair alarms</td><td>Nursing</td></tr>
+  <tr><td><strong>Q</strong></td><td>Participation & Goals</td><td>Did resident/family participate? Does resident want to return to community?</td><td>Social work</td></tr>
+  <tr><td><strong>V</strong></td><td>Care Area Assessment Summary</td><td>Which of 20 Care Area Triggers fired? Each trigger = must document care plan decision</td><td>MDS Coordinator</td></tr>
+  <tr><td><strong>X</strong></td><td>Correction Request</td><td>Used to correct submitted MDS data</td><td>MDS Coordinator</td></tr>
+  <tr><td><strong>Z</strong></td><td>Assessment Administration</td><td>Dates, signatures, attestations</td><td>MDS Coordinator</td></tr>
+</table>
+
+<h2>3. How Often Is MDS Completed?</h2>
+
+<pre>ADMISSION
+    │
+    ├── Day 1-3:       Admission assessment (OBRA)
+    │
+    ├── Day 5:         Medicare 5-day PPS assessment (PDPM)  ← MOST IMPORTANT FOR PAYMENT
+    │
+    ├── Day 14:        Medicare 14-day (if needed)
+    │
+    ├── Day 30/60/90:  Medicare PPS assessments
+    │
+    ├── Every 92 days: Quarterly review (OBRA)
+    │
+    ├── Every 366 days: Annual comprehensive (OBRA)
+    │
+    ├── Anytime:       Significant Change in Status (SCSA)
+    │                  — meaningful decline or improvement
+    │
+    └── DISCHARGE:     Discharge assessment</pre>
+
+<div class="note"><strong>Key fact:</strong> The Day 5 assessment is the most financially critical. It locks in the PDPM payment rate for the entire stay. If diagnoses are under-coded on Day 5, the SNF loses money for every subsequent day. This is why PDPM Coach exists.</div>
+
+<h2>4. PDPM — How Medicare Pays the SNF</h2>
+
+<p><strong>Before PDPM (pre-2019):</strong> SNFs were paid based on therapy minutes. More minutes = more money. Led to unnecessary therapy.</p>
+<p><strong>After PDPM (2019–present):</strong> Payment based on the patient's clinical characteristics from the MDS.</p>
+
+<pre>PDPM Daily Rate = PT + OT + SLP + Nursing + NTA
+                  ↑    ↑    ↑       ↑           ↑
+              Each driven by different MDS sections</pre>
+
+<table>
+  <tr><th>Component</th><th>Driven by MDS...</th></tr>
+  <tr><td>PT</td><td>Primary diagnosis (Section I) + functional status (Section GG)</td></tr>
+  <tr><td>OT</td><td>Primary diagnosis + functional status (GG)</td></tr>
+  <tr class="highlight-row"><td>SLP</td><td>Primary diagnosis + cognition (Section C) + swallowing <strong>(Section K)</strong></td></tr>
+  <tr><td>Nursing</td><td>Diagnoses + clinical conditions + depression (Section D)</td></tr>
+  <tr><td>NTA</td><td>High-cost drugs, dialysis, infections, IV meds (Section N, O)</td></tr>
+</table>
+
+<div class="sara-note"><strong>Sara's connection:</strong> Section K (nutrition/swallowing) directly feeds SLP payment. When Sara documented a swallowing disorder or mechanically altered diet as a dietitian, she was increasing SLP reimbursement — and was financially material without knowing it.</div>
+
+<h2>5. The Physician Workflow Problem — Sara's Insider Insight</h2>
+
+<p><em>Source: Sara's husband, a physician who refers patients to SNFs.</em></p>
+
+<h3>What Actually Happens</h3>
+<pre>Physician wants to document in PCC
+        ↓
+Opens portal → locked out → password reset required
+        ↓
+Gives up. Writes documentation by hand.
+        ↓
+Nurse scans it → uploads as PDF into PCC
+        ↓
+Unstructured image sitting in PCC
+        ↓
+Billing/coding team manually reads the PDF
+manually enters ICD-10 diagnosis codes
+        ↓
+MDS Coordinator pulls codes into Section I
+        ↓
+Section I feeds PDPM payment classification
+        ↓
+Manual entry = missed/incomplete diagnoses = undercoding
+        ↓
+SNF gets paid less than it should for every day of that stay</pre>
+
+<h3>Why This Is a Product Problem</h3>
+<ul>
+  <li><strong>Practitioner adoption failure:</strong> PCC has a Practitioner Engagement module. Physicians aren't using it. Password friction alone is enough to kill the workflow.</li>
+  <li><strong>Unstructured data problem:</strong> Scanned PDFs can't be queried. Diagnoses on paper don't auto-populate Section I.</li>
+  <li><strong>Reimbursement leakage:</strong> Day 5 assessment gets locked in with under-coded diagnoses. Every missed diagnosis is permanent revenue loss.</li>
+  <li><strong>Nursing burden:</strong> Nurses spend time scanning and uploading documentation that should never have been on paper.</li>
+</ul>
+
+<h3>The IDP Solution — Sara's Exact Background</h3>
+<pre>AI-assisted extraction from scanned physician note
+        ↓
+Auto-suggested ICD-10 diagnosis codes
+        ↓
+Billing team reviews and confirms (human-in-the-loop)
+        ↓
+Feeds directly into Section I before Day 5 assessment locks
+        ↓
+Accurate PDPM coding → correct reimbursement</pre>
+
+<blockquote>"My husband is a physician who refers patients to SNFs. He stopped using PCC's portal entirely — every login locks him out. He handwrites his documentation, nurses scan and upload it, and a billing team manually enters the diagnosis codes. I can trace the full downstream consequence — scanned PDFs can't feed the MDS the way structured data would, and if Section I is undercoded on Day 5, the SNF is leaving money on the table for the entire stay. The fix is AI-assisted extraction from that scanned document — which is exactly the IDP work I was doing at Concord."</blockquote>
+
+<h2>6. Physician Workflow — Product Strategy Insight</h2>
+
+<h3>The Sign-In Fix (Surface Level)</h3>
+<ul>
+  <li><strong>SSO</strong> — integrate with the hospital's existing identity provider. Physician never has a separate PCC password.</li>
+  <li><strong>Magic links via SMS</strong> — tap a link, you're in. No password to remember.</li>
+  <li><strong>Biometric login on mobile</strong> — Face ID / fingerprint. Zero friction.</li>
+</ul>
+<p>Any of these eliminates the reset loop. But this is the wrong framing.</p>
+
+<h3>Why Does PCC Keep Forcing Password Resets?</h3>
+<ol>
+  <li><strong>Outdated security policy</strong> — Healthcare IT has historically required resets every 30–90 days. NIST reversed this in 2017 — forced resets make security <em>worse</em> because users write passwords down. Healthcare IT is slow to update.</li>
+  <li><strong>Infrequent use triggers lockout</strong> — Visiting physician rounds once or twice a week. Many systems lock accounts after X days of inactivity. Weekly rounds + 30-day policy = locked out almost every visit.</li>
+  <li><strong>External user treatment</strong> — SNF physicians aren't employed by the facility. External accounts get shorter sessions, faster expiration, no SSO with home hospital credentials.</li>
+  <li><strong>No SSO</strong> — PCC credentials are completely separate. They expire while the physician isn't paying attention.</li>
+</ol>
+
+<blockquote>"The reset policy exists to satisfy a compliance requirement. The outcome is a folder of plaintext passwords in a laptop bag. That's the gap between compliance theater and actual security — and it's a product design problem PCC owns."</blockquote>
+
+<h3>The Power User Signal</h3>
+<p>A physician friend who actually uses PCC carries his laptop to SNFs and keeps a physical folder of passwords. This matters more than the physician who gave up — because it shows the problem isn't resistance to technology. It's authentication UX so broken that even committed users route around it with paper.</p>
+<p><strong>When the workaround is a folder, the fix isn't training. It's SSO.</strong></p>
+
+<h3>The Real Insight: Don't Fight the Paper — Make It Intelligent</h3>
+<p>Most SNF physicians are older and paper-preferring. Even with perfect SSO, a physician who has written notes by hand for 30 years isn't switching to a portal. The behavior is structural.</p>
+
+<blockquote>"My husband gave up on PCC entirely — password resets every time. His friend carries a laptop to SNFs and keeps a physical folder of passwords. When your most committed user's solution is a paper folder, you don't have an adoption problem. You have an authentication problem. But even fixing SSO doesn't solve the underlying issue — most SNF physicians are paper-preferring regardless of login friction. The durable product answer is IDP on scanned notes: make the paper intelligent rather than trying to eliminate it."</blockquote>
+
+<h2>7. PCC Product Suite — Likely Portfolio for This Role</h2>
+
+<div class="note"><strong>Important:</strong> The JD says "portfolio of Senior Care products" — you're owning multiple products. Products explicitly named in the JD are marked ★.<br><br><strong>Smart question to ask:</strong> "Can you tell me which products are in scope for this role? I want to make sure I'm thinking about the right areas going in."</div>
+
+<h3><span class="tag">★ JD</span> MDS / PDPM Coach</h3>
+<p><strong>What it is:</strong> The tool MDS coordinators use to complete the Day 5 Medicare assessment. Shows them in real time how their coding decisions affect Medicare reimbursement. Flags diagnoses that are under-documented before submission to CMS.</p>
+<p><strong>Why it matters:</strong> Day 5 locks in the payment rate for the entire stay. PCC's most financially critical SNF product.</p>
+<p><strong>Current gap:</strong> Guidance-based only — helps coordinators code better, doesn't automate intake. No AI extraction from physician notes. The scanned notes → undercoding problem is still unaddressed.</p>
+
+<h3><span class="tag">★ JD</span> LTCF / interRAI</h3>
+<p><strong>What it is:</strong> Canada's replacement for MDS. PCC is actively migrating Canadian customers to interRAI LTCF right now.</p>
+<p><strong>Why it matters:</strong> PCC is a Canadian company (HQ: Mississauga). Major in-progress product initiative.</p>
+<p><strong>Plain English:</strong> MDS but for Canada — different sections, different regulatory requirements, full platform migration underway.</p>
+
+<h3><span class="tag">★ JD</span> Immunizations</h3>
+<p><strong>What it is:</strong> Tracks resident immunization records — flu shots, COVID boosters, pneumococcal vaccines. Manages schedules, consent, and CMS reporting.</p>
+<p><strong>Why it matters:</strong> CMS requires SNFs to report immunization rates for quality star ratings. Missing documentation = lower star rating = lower occupancy.</p>
+
+<h3><span class="tag">★ JD</span> Clinical Documentation</h3>
+<p><strong>What it is:</strong> Core nursing workflow — assessments, care plans, progress notes, point-of-care charting on tablets/mobile.</p>
+<p><strong>Why it matters:</strong> Everything else feeds from it. If nursing documentation is incomplete, MDS, care plans, and downstream products break.</p>
+
+<h3>Nutrition Management</h3>
+<p><strong>What it is:</strong> Tracks dietary assessments, meal preferences, weight, and nutritional interventions.</p>
+<p><strong>Sara's connection:</strong> Feeds directly into MDS Section K — the section Sara owned as a dietitian. Weight loss flags, therapeutic diet orders, and swallowing interventions documented here affect SLP reimbursement under PDPM.</p>
+
+<h3>Medication Management</h3>
+<p><strong>What it is:</strong> Electronic medication administration record (eMAR). Nurses document every medication given, flag missed doses, reconcile pharmacy orders.</p>
+<p><strong>Why it matters:</strong> CMS tracks antipsychotic use as a quality indicator — documented in MDS Section N.</p>
+
+<h3>Skin & Wound</h3>
+<p><strong>What it is:</strong> Tracks pressure injuries and wounds — location, stage, dimensions, photos, treatment history.</p>
+<p><strong>Why it matters:</strong> Major CMS quality measure and litigation risk. Feeds into MDS Section M.</p>
+
+<h3>Practitioner Engagement</h3>
+<p><strong>What it is:</strong> The physician/NP portal for orders, notes, and ePrescribing.</p>
+<p><strong>Why it matters:</strong> Known adoption failure. See Section 5 & 6 of this guide.</p>
+
+<h3>Care Insights</h3>
+<p><strong>What it is:</strong> Analytics dashboard — population health views, early warning flags, census reporting, quality metrics.</p>
+<p><strong>Why it matters:</strong> Gives administrators and Directors of Nursing visibility across the resident population without digging into individual charts.</p>
+
+<h2>8. Key Acronyms</h2>
+
+<table>
+  <tr><th>Term</th><th>Meaning</th></tr>
+  <tr><td>MDS</td><td>Minimum Data Set</td></tr>
+  <tr><td>RAI</td><td>Resident Assessment Instrument (full framework MDS lives in)</td></tr>
+  <tr><td>OBRA</td><td>Omnibus Budget Reconciliation Act — law that mandates MDS</td></tr>
+  <tr><td>PDPM</td><td>Patient-Driven Payment Model — current Medicare SNF payment system</td></tr>
+  <tr><td>PPS</td><td>Prospective Payment System — how CMS pays SNFs</td></tr>
+  <tr><td>SCSA</td><td>Significant Change in Status Assessment</td></tr>
+  <tr><td>IDT</td><td>Interdisciplinary Team — nursing, therapy, social work, dietary, pharmacy</td></tr>
+  <tr><td>CMI</td><td>Case Mix Index — average acuity of a facility's patient population</td></tr>
+  <tr><td>iQIES</td><td>CMS's MDS submission portal (replaced QIES in 2022)</td></tr>
+  <tr><td>LTCF</td><td>Long-Term Care Facility (also interRAI's Canadian assessment tool)</td></tr>
+  <tr><td>SNF</td><td>Skilled Nursing Facility</td></tr>
+  <tr><td>LTACH</td><td>Long-Term Acute Care Hospital (higher acuity than SNF)</td></tr>
+  <tr><td>ADL</td><td>Activities of Daily Living</td></tr>
+  <tr><td>BIMS</td><td>Brief Interview for Mental Status (cognitive screen in Section C)</td></tr>
+  <tr><td>PHQ-9</td><td>Depression screen in Section D</td></tr>
+  <tr><td>IDP</td><td>Intelligent Document Processing</td></tr>
+  <tr><td>DON</td><td>Director of Nursing</td></tr>
+  <tr><td>SSO</td><td>Single Sign-On</td></tr>
+</table>
+
+<h2>9. Your Differentiators — How to Connect Them</h2>
+
+<h3>On clinical domain</h3>
+<blockquote>"As a clinical dietitian I completed Section K of the MDS for every resident on my caseload — weight loss flags, swallowing assessments, therapeutic diet documentation. I understand that workflow from the inside, including what makes it hard to complete accurately under time pressure."</blockquote>
+
+<h3>On care transitions</h3>
+<blockquote>"At Kern Medical I was coordinating discharges INTO SNFs — I was on the sending side of what PCC's platform receives. I understand what information makes it through that transition and what gets lost, because I watched it happen."</blockquote>
+
+<h3>On the physician workflow problem</h3>
+<blockquote>See Sections 5 & 6 of this guide.</blockquote>
+
+<h3>On product modernization</h3>
+<blockquote>"What draws me to this role is modernizing regulatory products like MDS that clinicians experience as a burden. There's real opportunity to use AI to surface what the MDS coordinator needs without making them hunt — similar to what I was building with Tether and the IDP work at Concord."</blockquote>
+
+<h2>10. Likely Phone Screen Questions</h2>
+
+<table>
+  <tr><th>Question</th><th>Your Angle</th></tr>
+  <tr><td>Walk me through your background</td><td>Clinician → care transitions → data → PM. The thread is always: I was inside the broken workflow.</td></tr>
+  <tr><td>Why PointClickCare / why senior care?</td><td>Section K + care transitions origin + IDP opportunity</td></tr>
+  <tr><td>Tell me about a product you owned end-to-end</td><td>DSM — 0→1, board investment, HIMSS 2026 launch</td></tr>
+  <tr><td>How do you handle regulatory complexity?</td><td>DSM had DirectTrust/HISP certification requirements. Built vendor-agnostic architecture.</td></tr>
+  <tr><td>Balance legacy maintenance vs. new development?</td><td>Concord Connect usability testing (1→n) while shipping DSM (0→1) in parallel</td></tr>
+  <tr><td>Where do you see product opportunity at PCC?</td><td>Physician workflow → IDP → PDPM coding accuracy (Sections 5 & 6)</td></tr>
+  <tr><td>How do you work with engineering?</td><td>Led 8 engineers through DSM alpha to production</td></tr>
+</table>
+
+</body>
+</html>
