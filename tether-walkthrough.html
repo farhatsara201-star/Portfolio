@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tether walkthrough — Sara Farhat</title>
+<meta name="description" content="Three views of Tether: call preparation, appointment coordination, and escalation tracking for post-discharge follow-up.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="tether-walkthrough.css">
+<script src="tether-walkthrough.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header"><nav class="nav container" aria-label="Walkthrough navigation"><a class="nav-logo" href="index.html">Sara Farhat</a><a class="case-back" href="index.html#work">← Back to selected work</a></nav></header>
+<main id="main" class="container walkthrough">
+<div class="walkthrough-intro"><p class="eyebrow">Tether · Personal prototype</p><h1>A more connected<br><span>post-discharge workflow.</span></h1><p>Acute-care transition LVNs could spend over an hour tracking down a patient, arranging follow-up, and uncovering discharge gaps. I built Tether to bring preparation, appointments, and escalation tracking into one workflow.</p></div>
+<nav class="walkthrough-controls" aria-label="Choose a prototype view" hidden>
+<button type="button" data-view="prep" aria-controls="prep" aria-pressed="true"><span>01</span> Call preparation</button>
+<button type="button" data-view="appointments" aria-controls="appointments" aria-pressed="false"><span>02</span> Appointment coordination</button>
+<button type="button" data-view="escalations" aria-controls="escalations" aria-pressed="false"><span>03</span> Escalation tracking</button>
+</nav>
+<section id="prep" class="walkthrough-view" aria-labelledby="prep-title"><div class="walkthrough-copy"><p class="eyebrow">01 / Before the call</p><h2 id="prep-title">Prepare with the gaps in view.</h2><p>The chart summary brings medications, social barriers, and coordination flags together, with source references and confidence indicators. Draft sections require review, helping the LVN identify what needs verification before speaking with the patient.</p><p class="view-detail">Call prompts and recommended appointment slots keep the next steps alongside the preparation.</p></div><figure><div class="screen-frame"><img src="tether-call-preparation.png" alt="Tether call preparation showing a draft chart summary, source references, confidence indicators, call prompts, and recommended appointments"></div><figcaption>Call preparation view · <a href="tether-call-preparation.png" target="_blank" rel="noopener">Open full screenshot ↗</a></figcaption></figure></section>
+<section id="appointments" class="walkthrough-view" aria-labelledby="appointments-title"><div class="walkthrough-copy"><p class="eyebrow">02 / Coordinate follow-up</p><h2 id="appointments-title">Make scheduling needs visible.</h2><p>The slot queue distinguishes patients with pre-allocated appointments from those who still need manual scheduling. The LVN can enter call preparation directly from the queue, keeping appointment coordination connected to the patient’s follow-up.</p><p class="view-detail">A shared view of what is ready and what still needs action.</p></div><figure><div class="screen-frame"><img src="tether-appointments.png" alt="Tether slot queue separating pre-allocated follow-up appointments from patients requiring manual scheduling" loading="lazy"></div><figcaption>Appointment coordination view · <a href="tether-appointments.png" target="_blank" rel="noopener">Open full screenshot ↗</a></figcaption></figure></section>
+<section id="escalations" class="walkthrough-view" aria-labelledby="escalations-title"><div class="walkthrough-copy"><p class="eyebrow">03 / Track unresolved issues</p><h2 id="escalations-title">Keep escalations in view.</h2><p>The escalation queue surfaces pending and overdue items, the requested action, and when it was raised. A resolution control gives the team a place to track whether an issue has been addressed.</p><p class="view-detail">The feedback loop to inpatient teams is a planned extension.</p></div><figure><div class="screen-frame"><img src="tether-escalations.png" alt="Tether escalation queue showing an overdue case-manager notification and a mark-resolved control" loading="lazy"></div><figcaption>Escalation tracking view · <a href="tether-escalations.png" target="_blank" rel="noopener">Open full screenshot ↗</a></figcaption></figure></section>
+<footer class="walkthrough-footer"><p>Prototype walkthrough. Readmission reduction motivated the concept; outcomes have not been measured.</p><a class="button button-primary" href="https://v0-tether-rho.vercel.app/" target="_blank" rel="noopener noreferrer">Explore the prototype ↗</a></footer>
+</main></body></html>

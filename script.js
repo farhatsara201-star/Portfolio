@@ -1,92 +1,89 @@
-// ===========================
-// NAV SCROLL EFFECT
-// ===========================
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 20);
-});
+document.documentElement.classList.add('js');
 
-// ===========================
-// MOBILE MENU
-// ===========================
+const header = document.querySelector('.site-header');
 const navToggle = document.getElementById('navToggle');
-const mobileMenu = document.getElementById('mobileMenu');
+const navLinks = document.getElementById('navLinks');
 
-navToggle.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-  const isOpen = mobileMenu.classList.contains('open');
-  navToggle.setAttribute('aria-expanded', isOpen);
-});
+const closeMenu = () => {
+  if (!navToggle || !navLinks) return;
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.setAttribute('aria-label', 'Open navigation');
+  navLinks.classList.remove('open');
+  document.body.classList.remove('menu-open');
+};
 
-document.querySelectorAll('.mobile-link').forEach(link => {
-  link.addEventListener('click', () => mobileMenu.classList.remove('open'));
-});
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
+    navLinks.classList.toggle('open', !isOpen);
+    document.body.classList.toggle('menu-open', !isOpen);
+  });
 
-// Close menu on outside click
-document.addEventListener('click', (e) => {
-  if (!nav.contains(e.target) && !mobileMenu.contains(e.target)) {
-    mobileMenu.classList.remove('open');
-  }
-});
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
 
-// ===========================
-// GSAP ANIMATIONS
-// ===========================
-window.addEventListener('load', () => {
-  if (typeof gsap === 'undefined') return;
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+      closeMenu();
+      navToggle.focus();
+    }
+  });
 
-  gsap.registerPlugin(ScrollTrigger);
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 680) closeMenu();
+  });
+}
 
-  // Hero entrance — only translate, no opacity (safe fallback)
-  const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-  heroTl
-    .from('.hero-eyebrow',    { y: 20, duration: 0.6 })
-    .from('.hero-name',       { y: 40, duration: 0.7 }, '-=0.3')
-    .from('.hero-tagline',    { y: 30, duration: 0.6 }, '-=0.4')
-    .from('.hero-sub',        { y: 20, duration: 0.5 }, '-=0.3')
-    .from('.hero-actions',    { y: 20, duration: 0.5 }, '-=0.3')
-    .from('.hero-badges',     { y: 15, duration: 0.4 }, '-=0.2')
-    .from('.hero-image-frame',{ x: 40, duration: 0.8, ease: 'power2.out' }, '-=0.8');
+window.addEventListener('scroll', () => {
+  if (header) header.classList.toggle('scrolled', window.scrollY > 12);
+}, { passive: true });
 
-  // Scroll-triggered — translate only, no opacity
-  const scrollFadeUp = (selector, trigger, stagger) => {
-    gsap.from(selector, {
-      scrollTrigger: { trigger: trigger || selector, start: 'top 88%', toggleActions: 'play none none none' },
-      y: 30, duration: 0.6, stagger: stagger || 0, ease: 'power2.out'
+const revealItems = document.querySelectorAll('[data-reveal]');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (reduceMotion || !('IntersectionObserver' in window)) {
+  revealItems.forEach(item => item.classList.add('is-visible'));
+} else {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
     });
-  };
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
 
-  scrollFadeUp('.section-header');
-  scrollFadeUp('.about-image-col');
-  scrollFadeUp('.about-text-col');
-  scrollFadeUp('.timeline-item', '.timeline', 0.15);
-  scrollFadeUp('.cs-card', '.cs-cards-grid', 0.1);
-  scrollFadeUp('.pm-who-card', '.pm-who-grid', 0.08);
-  scrollFadeUp('.stat', '.about-stats', 0.1);
-  scrollFadeUp('.contact-link', '.contact-links', 0.1);
+  revealItems.forEach(item => observer.observe(item));
+}
 
-  document.querySelectorAll('.case-study').forEach(el => {
-    gsap.from(el, {
-      scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
-      y: 40, duration: 0.7, ease: 'power2.out'
-    });
+
+// Lightweight reading progress, updated at most once per animation frame.
+let progressPending = false;
+let updateNavState = () => {};
+const updateReadingProgress = () => {
+  const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollableHeight > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollableHeight)) : 0;
+  if (header) header.style.setProperty('--reading-progress', String(progress));
+  updateNavState();
+  progressPending = false;
+};
+window.addEventListener('scroll', () => {
+  if (progressPending) return;
+  progressPending = true;
+  requestAnimationFrame(updateReadingProgress);
+}, { passive: true });
+window.addEventListener('resize', updateReadingProgress);
+window.addEventListener('load', updateReadingProgress);
+updateReadingProgress();
+
+// Identify the section currently being read without changing navigation history.
+const sectionLinks = navLinks ? [...navLinks.querySelectorAll('a[href^="#"]')] : [];
+const navSections = sectionLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+updateNavState = () => {
+  const activeSection = [...navSections].reverse().find(section => section.getBoundingClientRect().top <= window.innerHeight * 0.45);
+  sectionLinks.forEach(link => {
+    if (activeSection && link.getAttribute('href') === '#' + activeSection.id) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
   });
-
-  document.querySelectorAll('.result-card').forEach((el, i) => {
-    gsap.from(el, {
-      scrollTrigger: { trigger: el, start: 'top 92%', toggleActions: 'play none none none' },
-      scale: 0.92, duration: 0.4, delay: i * 0.06, ease: 'back.out(1.2)'
-    });
-  });
-
-  gsap.from('.pm-rounds-text', {
-    scrollTrigger: { trigger: '.pm-rounds', start: 'top 85%', toggleActions: 'play none none none' },
-    x: -30, duration: 0.7, ease: 'power2.out'
-  });
-  gsap.from('#substackPosts', {
-    scrollTrigger: { trigger: '.pm-rounds', start: 'top 85%', toggleActions: 'play none none none' },
-    x: 30, duration: 0.7, ease: 'power2.out'
-  });
-});
-
-// ===========================
+};
+updateNavState();
